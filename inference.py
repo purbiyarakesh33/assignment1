@@ -34,7 +34,7 @@ class Autoencoder(nn.Module):
 class RiskEngine:
     def __init__(self, base_dir):
         self.base_dir = base_dir
-        self.ae_dir   = os.path.join(base_dir, 'ae_models')
+        self.ae_dir   = base_dir
         self.device   = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
         # Load XGBoost model
